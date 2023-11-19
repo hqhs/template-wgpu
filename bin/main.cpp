@@ -24,15 +24,14 @@
  * SOFTWARE.
  */
 
-#include "webgpu-utils.h"
+#include <cassert>
+#include <iostream>
 
+#include <webgpu/webgpu.h>
 #include <GLFW/glfw3.h>
 #include <glfw3webgpu.h>
 
-#include <webgpu/webgpu.h>
-
-#include <cassert>
-#include <iostream>
+#include "webgpu-utils.h"
 
 WGPUShaderModule
 createShaderModule(WGPUDevice device, const char *source)

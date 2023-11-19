@@ -18,10 +18,11 @@ add_subdirectory(glfw3webgpu)
 
 # actual sources
 add_subdirectory(src)
+add_subdirectory(engine)
 
 add_executable(game bin/main.cpp)
 
-target_link_libraries(game PRIVATE glfw webgpu glfw3webgpu src)
+target_link_libraries(game PRIVATE glfw webgpu glfw3webgpu engine src)
 
 set_target_properties(game PROPERTIES
 	CXX_STANDARD 17

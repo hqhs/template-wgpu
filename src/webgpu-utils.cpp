@@ -24,11 +24,14 @@
  * SOFTWARE.
  */
 
-#include "webgpu-utils.h"
-
 #include <iostream>
 #include <vector>
 #include <cassert>
+
+#include "discipline_types.h"
+
+#include "webgpu-utils.h"
+
 
 WGPUAdapter
 requestAdapter(WGPUInstance instance, WGPURequestAdapterOptions const *options)

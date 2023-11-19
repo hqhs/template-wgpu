@@ -5,7 +5,7 @@ add_library(src STATIC
 
 # NOTE(hqhs): this allows to use relative imports
 target_include_directories(src PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(src PRIVATE webgpu)
+target_link_libraries(src PRIVATE webgpu engine)
 
 set_target_properties(src PROPERTIES
 	CXX_STANDARD 17
