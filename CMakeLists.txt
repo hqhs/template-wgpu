@@ -16,17 +16,16 @@ add_subdirectory(glfw)
 add_subdirectory(webgpu)
 add_subdirectory(glfw3webgpu)
 
-add_executable(template
-	bin/main.cpp
-	webgpu-utils.h
-	webgpu-utils.cpp
-)
+# actual sources
+add_subdirectory(src)
 
-target_link_libraries(template PRIVATE glfw webgpu glfw3webgpu)
+add_executable(game bin/main.cpp)
 
-set_target_properties(template PROPERTIES
+target_link_libraries(game PRIVATE glfw webgpu glfw3webgpu src)
+
+set_target_properties(game PROPERTIES
 	CXX_STANDARD 17
 	VS_DEBUGGER_ENVIRONMENT "DAWN_DEBUG_BREAK_ON_ERROR=1"
 )
-target_treat_all_warnings_as_errors(template)
-target_copy_webgpu_binaries(template)
+target_treat_all_warnings_as_errors(game)
+target_copy_webgpu_binaries(game)
