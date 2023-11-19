@@ -12,9 +12,9 @@ project(
 
 include(cmake/CompilerWarnings.cmake)
 
-add_subdirectory(glfw)
-add_subdirectory(webgpu)
-add_subdirectory(glfw3webgpu)
+add_subdirectory(lib/glfw)
+add_subdirectory(lib/webgpu)
+add_subdirectory(lib/glfw3webgpu)
 
 # actual sources
 add_subdirectory(src)
